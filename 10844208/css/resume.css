@@ -1,0 +1,592 @@
+
+        @font-face {
+            font-family: 'cwTeXFangSong';
+            font-style: normal;
+            font-weight: 500;
+            src: url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.eot);
+            src: url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.eot?#iefix) format('embedded-opentype'),
+                 url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.woff2) format('woff2'),
+                 url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.woff) format('woff'),
+                 url(//fonts.gstatic.com/ea/cwtexfangsong/v3/cwTeXFangSong-zhonly.ttf) format('truetype');
+          }
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: Arial, 'cwTeXFangSong',Helvetica, sans-serif;
+          background-image: url(../images/bg1.jpg);
+          margin: 10px;
+          border: 10px;
+          padding-bottom: 100px;
+        }
+        
+        /* Style the header */
+        header {
+          background-color: #666;
+          padding: 30px;
+          text-align: center;
+          font-size: 35px;
+          color: white;
+        }
+        
+        /* Container for flexboxes */
+        section {
+          display: -webkit-flex;
+          display: flex;
+        }
+        
+        /* Style the navigation menu */
+        nav {
+          -webkit-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          
+          padding: 10px;
+          width: auto;
+        height:auto;
+        background-color: rgba(118, 196, 176, 0.849);
+        padding-bottom: 90px;
+        }
+        
+        /* Style the list inside the menu */
+        nav ul {
+          list-style-type: none;
+          padding: 0;
+        }
+        
+        /* Style the content */
+        article {
+          -webkit-flex: 3;
+          -ms-flex: 3;
+          flex: 3;
+          background-color: #b8d3e9;
+          padding: 10px;
+          margin: 10px;
+        }
+        nav ul>p{
+            text-decoration: green 5px dashed underline;
+            font-weight: bolder; 
+            font-size: 25px;
+           
+        } 
+        .subtitle1{
+            padding: 20px;
+            /* margin: 5px; */
+            text-decoration: green 5px dashed underline;
+            font-weight: bolder; 
+            font-size: 25px;
+
+        }
+        
+        /* Style the footer */
+        .footer {
+          background-color: #777;
+          padding: 10px;
+          text-align: center;
+          color: white;
+          width:100%;
+          height: 64px;
+          position: fixed;
+         /* margin-top:-100px;*/
+          bottom: 0px;       
+        background-attachment: scroll;
+        }
+       .footer>h3{
+       position: absolute;
+       top:17px;
+       left: 38%;
+
+       }
+       
+        
+        /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+        @media (max-width: 600px) {
+          section {
+            -webkit-flex-direction: column;
+            flex-direction: column;
+          }
+        }
+       
+        .me{width:190px; 
+             height:200px;
+            border-radius: 50%;
+	        border: 1px solid rgba(255,0,0,1.00);
+            box-shadow: #777 2px 4px 1px;
+            overflow: hidden;
+            position: relative;
+             top: -40px;
+             left: 23%;
+    
+    
+        } 
+        .me>img{
+            width:100%;
+             height:100%;
+             position: relative;
+             top: -2%;
+             left:5px; }
+        .links{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+            align-items: center;
+            padding: 12px;
+
+        }  
+        .info{
+            text-align: center;
+            
+            text-decoration: dashed 10px green;
+            font-size: 25px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+        }
+        
+	
+.intro>h2{
+    font-size: 1.5em;
+    color: indigo;
+    font-weight: bolder;
+    border: dashed 12px rgb(231, 183, 93);
+    border-radius: 30%;
+    padding: 28px;
+    letter-spacing: 2px;
+}
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.skill-bars{
+  padding: 25px 30px;
+  width: 300px;
+  background: rgb(141, 182, 141);
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+.skill-bars .bar{
+  margin: 20px 0;
+}
+.skill-bars .bar:first-child{
+  margin-top: 0px;
+}
+.skill-bars .bar .info{
+  margin-bottom: 5px;
+}
+.skill-bars .bar .info span{
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line{
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+              0 1px rgba(255,255,255,0.8);
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span{
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #6665ee;
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar .progress-line.html span{
+  width: 90%;
+}
+.bar .progress-line.css span{
+  width: 75%;
+}
+.bar .progress-line.java span{
+  width: 60%;
+}
+.bar .progress-line.python span{
+  width: 70%;
+}
+.bar .progress-line.mysql span{
+  width: 75%;
+}
+.progress-line span::before{
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100%{
+    opacity: 1;
+  }
+}
+.progress-line.html span::after{
+  content: "90%";
+}
+.progress-line.css span::after{
+  content: "75%";
+}
+.progress-line.java span::after{
+  content: "60%";
+}
+.progress-line.python span::after{
+  content: "70%";
+}
+.progress-line.mysql span::after{
+  content: "75%";
+}
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+    left: 31px;
+    }
+    
+    /* Full-width containers */
+    .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
+    
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+    left: 15px;
+    }
+    
+    /* Make all right containers behave like the left ones */
+    .right {
+    left: 0%;
+    }
+  }
+.firstimg{
+    width: 330px;
+    height: 25%;
+    position: absolute;
+    top:20px;
+    left:670px;
+}
+.firstimg:hover{
+    width: 360px;
+    height: 30%;
+transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -webkit-transform: scale(1.4);}
+.secondimg{
+    width:340px;
+    height: 25%;
+    position: absolute;
+    top:430px;
+    left:8%; 
+}
+.secondimg:hover{
+opacity: 0.2;
+
+}
+.thirdimg{
+    width: 330px;
+    height: 16%;
+    position: absolute;
+    top:960px;
+    left:60%;
+}
+.thirdimg:hover{
+    transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+}
+.fourthimg{
+    width:410px;
+    height: 20%;
+    position: absolute;
+    top:1320px;
+    left:7%; 
+}
+.fourthimg:hover{
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.8);
+}
+.accordion {
+    background-color: rgb(250, 194, 111);
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: rgb(255, 226, 146);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    letter-spacing: 7px;
+    line-height: 36px;
+    font-family: "微軟正黑體";
+    font-size: 23px;
+    font-weight: bold;
+  }
+  #fast1 {
+    position: relative;
+    -moz-transition-property: font-size;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-property: font-size;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-property: font-size;
+    -o-transition-duration: 0.5s;
+   
+  }
+  .sidebar{
+    display: flex;
+    flex-flow: row nowrap;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: space-around;
+   align-content: center ;
+   align-items: center ;}
+  
+  
+  #fast1:hover {
+    position: relative;
+    -moz-transition-property: font-size;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-property: font-size;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-property: font-size;
+    -o-transition-duration: 0.5s;
+    font-size: 36px;
+  }
+  .menuButton {
+    
+    /*position: relative;*/
+    transition-property: background-color, color;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    -webkit-transition-property: background-color, color;
+    -webkit-transition-duration: 1s;
+    -o-transition-property: background-color, color;
+    -o-transition-duration: 1s;
+    text-align: left;
+    background-color: rgb(141, 94, 185);
+    left: 15px;
+    top: 5px;
+    height: 26px;
+    padding-left:20px;
+    padding-top: 6px;
+    border-left: 10px;
+    color: white;
+    border-color: black;
+    border-radius: 20%;
+    font-family: sans-serif;
+    font-size: 30px;
+    text-decoration: none;
+    -moz-box-shadow: 2px 2px 1px rgb(152, 210, 248);
+    padding: 2px 4px;
+    border: solid 1px black;
+    
+  }
+  
+  .menuButton:hover {
+    position: relative;
+    transition-property: background-color, color;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+    -webkit-transition-property: background-color, color;
+    -webkit-transition-duration: 1s;
+    -o-transition-property: background-color, color;
+    -o-transition-duration: 1s;
+    background-color:rgb(243, 219, 225);
+    color:rgb(15, 7, 124);
+    -moz-box-shadow: 2px 2px 1px rgb(238, 174, 224);
+    font-weight: bolder;
+    outline: #3a9956 dashed 7px;
+    font-size: 36px;
+  }
+  .top{
+    position:absolute;
+    right:11px;
+    bottom:6%;
+    z-index:2;
+   background-color: blanchedalmond ;
+    
+  }
+  div.gallery {
+    margin: 5px;
+    background-color:lavender;
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bolder;
+    text-shadow: rgba(2, 2, 160, 0.774) 3px 3px 2px;
+    font-family: "微軟正黑體";
+  }
+  
+  div.gallery:hover {
+    transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -webkit-transform: scale(1.4);;
+  }
+  
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+
+  }
